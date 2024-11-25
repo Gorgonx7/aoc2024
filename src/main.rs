@@ -1,7 +1,6 @@
 use anyhow::Result;
 use clap::Parser;
 pub mod commands;
-pub mod pkg;
 use crate::commands::day1::Day1;
 use crate::commands::day2::Day2;
 
@@ -27,7 +26,7 @@ impl CLI {
 fn main() {
     let args = CLI::parse();
     match args.execute() {
-        Ok(_) => println!("OK"),
+        Ok(_) => println!("\nOK\n"),
         Err(err) => panic!("command failed: {}", err),
     }
 }

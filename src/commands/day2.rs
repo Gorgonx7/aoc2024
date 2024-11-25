@@ -1,15 +1,17 @@
 use anyhow::{Ok, Result};
 use clap::Parser;
+use super::pkg;
+use pkg::util::read_file;
+
 
 #[derive(Parser)]
 pub struct Day2 {
-    message: Option<String>,
 }
 
 impl Day2 {
     pub fn execute(&self) -> Result<()> {
-        let value = self.message.as_deref().unwrap_or("world");
-        println!("day 2 hello {}", value);
+        let data = read_file("data.txt".to_string());
+        print!("data: {}", data);
         Ok(())
     }
 }
