@@ -31,6 +31,6 @@ mod tests {
  #[test]
  fn test_add() {
     let d = Day1{ message: None};
-     assert_eq!(d.good_add(1, 2), 3);
+     assert_eq!(d.good_add(1, 3), 4);
  }
 }
